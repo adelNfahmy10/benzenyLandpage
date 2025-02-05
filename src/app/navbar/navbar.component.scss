@@ -1,0 +1,50 @@
+$mainColor:#f79320;
+
+nav{
+    box-shadow: 0 0 10px 10px #eee;
+    top: 30px;
+    background-color: #eee;
+    backdrop-filter: blur(20px);
+    .navbar-brand{
+        img{
+            width: 100px;
+        }
+        transition: all .3s;
+        cursor: pointer;
+        span{
+            text-shadow: 0 0 25px $mainColor;
+        }
+    }
+    .navbar-toggler-icon{
+        background: none;
+    }
+    .navbar-brand:hover{
+        transform: scale(1.1);
+    }
+    .nav-link{
+        color: var(--text-color);
+        font-weight: 500;
+        position: relative;
+        transition: all .3s ease;
+    }
+    .nav-link:hover{
+        color: var(--mian-color) !important;
+    }
+    .nav-link::before{
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--mian-color);
+        transition: all .3s;
+    }
+    .active{
+        color: var(--mian-color) !important;
+    }
+    .nav-link.active::before,.nav-link:hover::before{
+        width: 75%;
+    }
+
+}
