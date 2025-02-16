@@ -7,14 +7,14 @@ nav{
     background-color: #eee;
     backdrop-filter: blur(20px);
     .navbar-brand{
-        img{
-            width: 100px;
-        }
-        transition: all .3s;
-        cursor: pointer;
-        span{
-            text-shadow: 0 0 25px $mainColor;
-        }
+      img{
+          width: 100px;
+      }
+      transition: all .3s;
+      cursor: pointer;
+      span{
+          text-shadow: 0 0 25px $mainColor;
+      }
     }
     .navbar-toggler-icon{
         background: none;
