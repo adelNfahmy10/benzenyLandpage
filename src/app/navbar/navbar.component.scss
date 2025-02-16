@@ -6,6 +6,10 @@ nav{
     top: 30px;
     background-color: #eee;
     backdrop-filter: blur(20px);
+    position: absolute;
+    top: 35px;
+    left: 15%;
+    z-index: 9999;
     .navbar-brand{
       img{
           width: 100px;
