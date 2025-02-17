@@ -13,17 +13,16 @@ export class NavbarComponent{
   navbarLeft:string = '15%'
   navbarTop:string = '35px'
   @HostListener('window:scroll') onScroll(){
-    const scrollPosition = window.scrollY;  // Get the current scroll position
+    const scrollPosition = window.scrollY;
 
-    // Change the width of the navbar based on the scroll position
     if (scrollPosition > 200) {
-      this.navbarWidth = '100%';  // When scrolled more than 100px, reduce width
-      this.navbarLeft = '0';  // When scrolled more than 100px, reduce width
-      this.navbarTop = '0';  // When scrolled more than 100px, reduce width
+      this.navbarWidth = '100%';
+      this.navbarLeft = '0';
+      this.navbarTop = '0';
     } else {
-      this.navbarWidth = '70%'; // When at the top, keep it full width
-      this.navbarLeft = '15%';  // When scrolled more than 100px, reduce width
-      this.navbarTop = '35px';  // When scrolled more than 100px, reduce width
+      this.navbarWidth = '70%';
+      this.navbarLeft = '15%';
+      this.navbarTop = '35px';
     }
   }
 }
