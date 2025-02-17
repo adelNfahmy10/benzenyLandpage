@@ -1,44 +1,44 @@
-<nav class="navbar navbar-expand-lg rounded-5 px-5">
-    <a class="navbar-brand">
-        <img src="./assets/image/logo.webp" alt="benzeny">
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon d-flex justify-content-center align-items-center">
-            <i class="fa-brands fa-nfc-symbol text-dark fs-1"></i>
-        </span>
-    </button>
-    <div class="collapse navbar-collapse list-Item" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto gap-4">
-          <li class="nav-item">
-              <a class="nav-link px-0 active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link px-0" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link px-0" href="#service">Service</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link px-0" href="#skills">Features</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link px-0" href="#education">Contact Us</a>
-          </li>
-        </ul>
+<nav [ngClass]="{'rounded-top-0': navbarWidth == '100%','rounded-bottom-0': navbarWidth == '100%'}" [ngStyle]="{ 'width': navbarWidth, 'left': navbarLeft, 'top': navbarTop }" class="navbar navbar-expand-lg rounded-5 px-5">
+  <a class="navbar-brand">
+      <img src="./assets/image/logo.webp" alt="benzeny">
+  </a>
+  <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon d-flex justify-content-center align-items-center">
+          <i class="fa-brands fa-nfc-symbol text-dark fs-1"></i>
+      </span>
+  </button>
+  <div class="collapse navbar-collapse list-Item" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto gap-4">
+        <li class="nav-item">
+          <a class="nav-link px-0" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-0" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-0" href="#service">Service</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-0" href="#feature">Features</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-0" href="#contact">Contact Us</a>
+        </li>
+      </ul>
 
-        <ul class="navbar-nav ms-auto gap-3 justify-content-center align-items-center">
-            <!-- <li class="nav-item">
-                <select class="form-select shadow-none border-0" name="lang" id="lang">
-                    <option value="en">EN <i class="fa-solid fa-globe"></i></option>
-                    <option value="ar">AR <i class="fa-solid fa-globe"></i></option>
-                </select>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link p-0">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link p-0">Signup</a>
-            </li>
-        </ul>
-    </div>
+      <ul class="navbar-nav ms-auto gap-3 justify-content-center align-items-center">
+          <!-- <li class="nav-item">
+              <select class="form-select shadow-none border-0" name="lang" id="lang">
+                  <option value="en">EN <i class="fa-solid fa-globe"></i></option>
+                  <option value="ar">AR <i class="fa-solid fa-globe"></i></option>
+              </select>
+          </li> -->
+          <li class="nav-item">
+              <a class="nav-link p-0">Login</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link p-0">Signup</a>
+          </li>
+      </ul>
+  </div>
 </nav>
