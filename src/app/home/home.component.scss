@@ -36,6 +36,38 @@ $mainColor:#f79320;
   }
 }
 
+@media (max-width:768px) {
+  .home{
+    .head-text{
+      margin-top: 25px;
+      h1,h2{
+        text-align: center !important;
+        font-size: 30px !important;
+      }
+      h2{
+        left: 0;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+    .arrowDonw{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      width: 20px;
+      height: 50px;
+      border-radius: 20px;
+      border: 1px solid #fff;
+      text-align: center;
+      i{
+        font-size: 20px;
+        animation: down 1.2s infinite forwards alternate-reverse;
+      }
+    }
+  }
+}
+
 @keyframes down {
   0%{
     transform: translateY(0);
