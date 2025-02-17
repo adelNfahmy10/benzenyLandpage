@@ -1,0 +1,52 @@
+$mainColor:#F79320;
+.soical{
+  a{
+    color: $mainColor;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid $mainColor;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    i{
+      font-size: 20px;
+    }
+    &:hover{
+      background-color: $mainColor;
+      color: #fff;
+      border-radius: 0;
+    }
+  }
+}
+.links{
+  ul{
+    li{
+      a{
+        position: relative;
+        cursor: pointer;
+        transition: all .3s;
+        text-decoration: none;
+        color: inherit;
+        &::before{
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $mainColor;
+          transition: all .3s;
+        }
+        &:hover{
+          color: $mainColor;
+        }
+        &:hover::before{
+          width: 70%;
+        }
+      }
+    }
+  }
+}
