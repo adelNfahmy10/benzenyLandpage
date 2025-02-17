@@ -6,12 +6,13 @@ import { ServiceComponent } from "./service/service.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NgClass } from '@angular/common';
 import { NgwWowService } from 'ngx-wow';
+import { FeatureComponent } from "./feature/feature.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, AboutComponent, ServiceComponent, FooterComponent, NgClass],
+  imports: [NavbarComponent, HomeComponent, AboutComponent, ServiceComponent, FooterComponent, NgClass, FeatureComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -19,12 +20,11 @@ import { NgwWowService } from 'ngx-wow';
 export class AppComponent {
   showArrow:boolean = false
   @HostListener('window:scroll') onScroll(){
-    let scrollPosition = window.scrollY;  // Get the current scroll position
-    // Change the width of the navbar based on the scroll position
+    let scrollPosition = window.scrollY;
     if (scrollPosition > 200) {
-      this.showArrow = true  // When scrolled more than 100px, reduce width
+      this.showArrow = true
     } else {
-      this.showArrow = false  // When scrolled more than 100px, reduce width
+      this.showArrow = false
     }
   }
   constructor(private wowService: NgwWowService) {
