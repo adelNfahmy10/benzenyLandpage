@@ -6,10 +6,15 @@ $mainColor: #f79320;
 .main-color{
   color:$mainColor
 }
-*:not(i){
+*{
   font-family: "Work Sans", serif;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: "Merriweather", serif;
 }
-
+h1,h2{
+  letter-spacing: 4px !important;
+}
+span{
+  font-family: inherit;
+}

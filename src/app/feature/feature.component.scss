@@ -1,0 +1,14 @@
+$mainColor:#F79320;
+.feature{
+  .item{
+    box-shadow: 0 0 10px #eee;
+    transition: all .3s;
+    img{
+      width: 50px;
+      filter: drop-shadow(0 0 10px $mainColor);
+    }
+    &:hover{
+      box-shadow: 0 0 10px #AAA;
+    }
+  }
+}
