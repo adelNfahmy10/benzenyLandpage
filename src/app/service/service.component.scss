@@ -1,3 +1,5 @@
+$mainColor:#f79320;
+
 .nav-tabs .nav-link{
   color: #333;
   background-color: #eee;
@@ -5,5 +7,12 @@
     background-color: #F79421;
     color: #fff;
   }
-
+}
+.slide{
+  box-shadow: 0 0 10px $mainColor;
+  width: 400px;
+  img{
+    height: 200px;
+    object-fit: cover;
+  }
 }
