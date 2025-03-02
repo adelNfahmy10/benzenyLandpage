@@ -1,53 +1,66 @@
 $mainColor:#f79320;
-nav{
-  width: 70%;
-  box-shadow: 0 0 20px #f79320af;
-  top: 30px;
-  background-color: #eee;
-  backdrop-filter: blur(20px);
-  position: fixed;
-  top: 35px;
-  left: 15%;
-  z-index: 9999;
+*{
   transition: all .3s;
+}
+nav{
+  background-color: #eee;
+  z-index: 9999;
   .navbar-brand{
-    img{
-        width: 100px;
-    }
-    transition: all .3s;
     cursor: pointer;
+    img{
+      width: 120px;
+    }
     span{
-        text-shadow: 0 0 25px $mainColor;
+      text-shadow: 0 0 25px $mainColor;
     }
   }
   .navbar-toggler-icon{
-      background: none;
+    background: none;
   }
-  .navbar-brand:hover{
-      transform: scale(1.1);
-  }
+
   .list-Item{
-      .nav-link{
-          font-size: 14px;
-          font-weight: 500;
-          position: relative;
-          transition: all .3s ease;
-          &::before{
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: $mainColor;
-            transition: all .3s;
-          }
-          &:hover{
-            color: $mainColor;
-          }
-          &.active::before,&:hover::before{
-            width: 75%;
-          }
+    .nav-link:not(.auth){
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: 6px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: $mainColor;
+        transition: all .3s;
       }
+      &.active, &:hover{
+        color: $mainColor;
+        font-weight: bold;
+      }
+      &.active::before,&:hover::before{
+        width: 75%;
+      }
+    }
+    .auth{
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+}
+@media (max-width:991px) {
+  nav{
+    padding-inline: 20px !important;
+    .navbar-nav{
+      gap: 0 !important;
+    }
+    .list-Item{
+      .nav-link{
+        &.active::before,&:hover::before{
+          width: 25px !important;
+        }
+      }
+    }
   }
 }
