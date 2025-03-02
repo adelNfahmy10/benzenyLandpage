@@ -11,7 +11,7 @@ import { Component, HostListener } from '@angular/core';
 export class NavbarComponent{
   navbarWidth:string = '70%'
   navbarLeft:string = '15%'
-  navbarTop:string = '35px'
+  navbarTop:string = '15px'
   @HostListener('window:scroll') onScroll(){
     const scrollPosition = window.scrollY;
 
@@ -22,7 +22,18 @@ export class NavbarComponent{
     } else {
       this.navbarWidth = '70%';
       this.navbarLeft = '15%';
-      this.navbarTop = '35px';
+      this.navbarTop = '15px';
+    }
+  }
+  activeLink: string = 'home';
+  setActiveLink(link: string) {
+    this.activeLink = link;
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // التمرير السلس إلى العنصر
     }
   }
 }
