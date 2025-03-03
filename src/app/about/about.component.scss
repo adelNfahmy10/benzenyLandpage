@@ -18,7 +18,7 @@ $mainColor:#f79320;
       right: 0;
       width: 2px;
       height: 100%;
-      background-image: linear-gradient(to bottom, #000000, #f793206d, #f793201d, #fff);
+      background-image: linear-gradient(to bottom, #000000a9 5%, #f793206d 30%, #f793200c 50%, #fff 100%);
     }
     @media (max-width:567px) {
       .star-img,&::after{
