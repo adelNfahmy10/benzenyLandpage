@@ -3,7 +3,9 @@ $mainColor:#f79320;
   transition: all .3s;
 }
 nav{
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px #8a8a8a;
   z-index: 9999;
   .navbar-brand{
     cursor: pointer;
