@@ -1,5 +1,5 @@
-import { NgClass, NgStyle } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { isPlatformBrowser, NgClass, NgStyle } from '@angular/common';
+import { Component, HostListener, inject, PLATFORM_ID, ViewChild, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +9,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent{
+  private readonly _PLATFORM_ID = inject(PLATFORM_ID)
   navbarWidth:string = '70%'
   navbarLeft:string = '15%'
   navbarTop:string = '15px'
@@ -31,9 +32,11 @@ export class NavbarComponent{
   }
 
   scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); // التمرير السلس إلى العنصر
+    if(isPlatformBrowser(this._PLATFORM_ID)){
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 }
