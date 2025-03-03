@@ -1,19 +1,72 @@
-<section id="service" class="service">
-  <h2 class="text-center wow fadeInDown"><span class="main-color">SE</span>RVICES</h2>
-  <swiper-container class="mySwiper" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
-  slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-  coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
-    @for (slide of getAllSlide; track $index) {
-      <swiper-slide class="slide my-3 p-3 rounded-3 position-relatives">
-        <div>
-          <h4>{{slide.title}}</h4>
-          <p>{{slide.desc}}</p>
-        </div>
-        <div class="text-center">
-          <img [src]="slide.src" class="w-100">
-        </div>
+<section id="service" class="service py-5">
+  <div class="container">
+    <h2 class="text-center wow fadeInDown"><span class="main-color">OUR </span>SERVICES</h2>
+    <swiper-container class="mySwiper wow fadeInDown" autoplay-delay="2000" effect="coverflow" grab-cursor="true" centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service1.webp" />
       </swiper-slide>
-    }
-  </swiper-container>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service4.webp" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service3.webp" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service5.webp" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service6.webp" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service2.webp" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service7.webp" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/image/service-image/service8.webp" />
+      </swiper-slide>
+    </swiper-container>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="service-info">
+          <div class="mb-4">
+            <h5>Various companies</h5>
+            <p>If you are running a business with a lot of vehicles, paying or financing for petrol can get complicated especially with the unstable prices of petrol these day. That's why we have lunched Benzeny to make it easier for the companies to provide petrol for their drivers without any trouble. Top secret technical app seeks saving time and providing the highest level of financial security.</p>
+          </div>
+          <div>
+            <h5>Benefits of Benzeny</h5>
+            <p>Benzeny services provide monthly VAT invoice for fuel consumption so companies and recover the Vat Benzeny eliminates the use of invoices for filling fuel which can be played with or lost in sometimes Benzeny is also time efficient as you would not spend hours and hours trying to finance petrol prices Benzeny also provides monthly reports for each drivers containing which station the operation took place, the amount, petrol type and date/time.
+            We provide tech support to our costumers and ask for feedbacks to improve our service Benzeny gives you complete control over your petrol finance in one single platform.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="service-info">
+          <div>
+            <h5>Station companies</h5>
+            <ul class="list-unstyled">
+              <li>Provides daily/weekly/monthly reports to track sales progress and the amount of fuel sold (Diesel, 95, 91).</li>
+              <li>Allows station companies to view employee reports and calculate each worker’s sales.</li>
+              <li>Reduces cash handling by staff, minimizing the risk of theft or loss.</li>
+              <li>Brings new customers (various companies & individuals) to the stations.</li>
+              <li>Sends a support team to train station staff on how to use the system.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5>Station Requirements</h5>
+            <ul class="list-unstyled">
+              <li>The station must have an official agreement with Benzeny to activate the service.</li>
+              <li>Each station needs one affordable smartphone with internet access, allowing staff to scan customer QR codes and track sales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
