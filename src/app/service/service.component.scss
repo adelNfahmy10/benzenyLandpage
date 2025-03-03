@@ -1,18 +1,63 @@
 $mainColor:#f79320;
 
-.nav-tabs .nav-link{
-  color: #333;
-  background-color: #eee;
-  &.active{
-    background-color: #F79421;
-    color: #fff;
+.service{
+  h2{
+    font-size: 40px;
+    word-spacing: -5px;
+    font-weight: bold;
   }
-}
-.slide{
-  box-shadow: 0 0 10px $mainColor;
-  width: 400px;
-  img{
+  background-color: #f9f9f9ab;
+  swiper-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
     height: 200px;
-    object-fit: cover;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .service-info{
+    h5{
+      font-size: 17px;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        width: 50px;
+        background-color: $mainColor;
+      }
+    }
+    p{
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    ul{
+      li{
+        font-size: 14px;
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: -10px;
+          width: 5px;
+          height: 5px;
+          background-color: $mainColor;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 }
