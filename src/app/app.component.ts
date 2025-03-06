@@ -5,7 +5,6 @@ import { AboutComponent } from "./about/about.component";
 import { ServiceComponent } from "./service/service.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NgClass } from '@angular/common';
-import { NgwWowService } from 'ngx-wow';
 import { FeatureComponent } from "./feature/feature.component";
 
 
@@ -19,6 +18,8 @@ import { FeatureComponent } from "./feature/feature.component";
 })
 export class AppComponent {
   showArrow:boolean = false
+
+
   @HostListener('window:scroll') onScroll(){
     let scrollPosition = window.scrollY;
     if (scrollPosition > 200) {
@@ -26,8 +27,5 @@ export class AppComponent {
     } else {
       this.showArrow = false
     }
-  }
-  constructor(private wowService: NgwWowService) {
-    this.wowService.init();
   }
 }
