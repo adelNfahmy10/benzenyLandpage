@@ -31,9 +31,15 @@ export class NavbarComponent{
     }
 
     if (scrollPosition > this.lastScrollTop) {
-      this.navbarTop = '-100px';
+      if(this.lastScrollTop > 200){
+        this.navbarTop = '-100px';
+      }
     } else {
-      this.navbarTop = '0';
+      if(this.lastScrollTop > 200){
+        this.navbarTop = '0';
+      } else {
+        this.navbarTop = '15px';
+      }
     }
 
     this.lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
@@ -62,20 +68,22 @@ export class NavbarComponent{
   }
 
   ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.activeLink = entry.target.id;
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+    if(isPlatformBrowser(this._PLATFORM_ID)){
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.activeLink = entry.target.id;
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
 
-    this.sections.forEach((section) => {
-      const element = document.getElementById(section.id);
-      if (element) observer.observe(element);
-    });
+      this.sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) observer.observe(element);
+      });
+    }
   }
 }

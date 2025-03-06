@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, inject, RendererFactory2, ViewChild } from '@angular/core';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
@@ -17,9 +17,9 @@ import { FeatureComponent } from "./feature/feature.component";
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
+  private readonly _RendererFactory2 = inject(RendererFactory2).createRenderer(null,null)
+
   showArrow:boolean = false
-
-
   @HostListener('window:scroll') onScroll(){
     let scrollPosition = window.scrollY;
     if (scrollPosition > 200) {
