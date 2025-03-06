@@ -1,11 +1,10 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, inject, RendererFactory2, ViewChild } from '@angular/core';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import { ServiceComponent } from "./service/service.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NgClass } from '@angular/common';
-import { NgwWowService } from 'ngx-wow';
 import { FeatureComponent } from "./feature/feature.component";
 
 
@@ -18,6 +17,8 @@ import { FeatureComponent } from "./feature/feature.component";
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
+  private readonly _RendererFactory2 = inject(RendererFactory2).createRenderer(null,null)
+
   showArrow:boolean = false
   @HostListener('window:scroll') onScroll(){
     let scrollPosition = window.scrollY;
@@ -26,8 +27,5 @@ export class AppComponent {
     } else {
       this.showArrow = false
     }
-  }
-  constructor(private wowService: NgwWowService) {
-    this.wowService.init();
   }
 }

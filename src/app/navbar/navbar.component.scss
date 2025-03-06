@@ -66,3 +66,31 @@ nav{
     }
   }
 }
+
+.car-gif{
+  position: fixed;
+  bottom: -95px;
+  right: -100%;
+  width: 300px;
+  z-index: 9999;
+  animation: goRight 5s ease-in infinite;
+}
+
+@keyframes goRight {
+  0%{
+    right: -100%;
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  98%{
+    opacity: 1;
+  }
+  100%{
+    right: 100%;
+  }
+}
