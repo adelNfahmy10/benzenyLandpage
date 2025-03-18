@@ -6,19 +6,18 @@ import { ServiceComponent } from "./service/service.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NgClass } from '@angular/common';
 import { FeatureComponent } from "./feature/feature.component";
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, AboutComponent, ServiceComponent, FooterComponent, NgClass, FeatureComponent],
+  imports: [NavbarComponent, HomeComponent, FooterComponent, NgClass, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
-  private readonly _RendererFactory2 = inject(RendererFactory2).createRenderer(null,null)
-
   showArrow:boolean = false
   @HostListener('window:scroll') onScroll(){
     let scrollPosition = window.scrollY;
