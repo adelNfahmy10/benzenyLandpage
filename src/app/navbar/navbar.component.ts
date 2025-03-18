@@ -5,7 +5,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgStyle, NgClass, NgFor],
+  imports: [NgStyle, NgClass, NgFor, RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -51,7 +51,6 @@ export class NavbarComponent{
     { id: 'about', name: 'About' },
     { id: 'service', name: 'Service' },
     { id: 'feature', name: 'Features' },
-    { id: 'contact', name: 'Contact Us' },
   ];
   activeLink: string = 'home';
 

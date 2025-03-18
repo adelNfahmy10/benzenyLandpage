@@ -1,10 +1,4 @@
-<section>
+<section class="overflow-hidden">
   <router-outlet></router-outlet>
-  <app-navbar></app-navbar>
-  <app-home></app-home>
-  <app-about></app-about>
-  <app-service></app-service>
-  <app-feature></app-feature>
-  <app-footer></app-footer>
   <a href="#home" [ngClass]="{'d-block': showArrow,'d-none': !showArrow}" class="arrowup cr"><i class="fa-solid fa-chevron-up"></i></a>
 </section>
