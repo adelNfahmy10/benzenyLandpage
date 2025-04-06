@@ -1,0 +1,78 @@
+$mainColor:#F79320;
+section {
+  color: #fff;
+  background: linear-gradient(to bottom, #00000072, #00000072),
+    url("../../assets/image/app-download/bg-app-download.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px 40px 0;
+
+  h4 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .phone-img,
+  .phone-img2 {
+    width: 200px;
+  }
+
+  .phone-img2 {
+    position: relative;
+    top: 50px;
+    left: -50px;
+  }
+
+  .info-download {
+    background-color: #f79320a1;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $mainColor;
+    }
+
+    .dowonload-info {
+      span {
+        font-size: 10px;
+      }
+
+      h5 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    .img-icon-download img {
+      width: 30px;
+    }
+  }
+
+  // Media Queries
+  @media (max-width: 991px) {
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    .phone-img,
+    .phone-img2 {
+      width: 180px;
+    }
+
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .phone-img,
+    .phone-img2 {
+      width: 150px;
+    }
+
+    h4 {
+      font-size: 25px;
+    }
+  }
+}
