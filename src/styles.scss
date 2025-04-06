@@ -1,17 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 $mainColor: #f79320;
 .cr{cursor: pointer;}
 .main-color{
   color:$mainColor
 }
 *{
-  font-family: "Work Sans", serif;
+  // font-family: "Work Sans", serif;
+  font-family: "Lexend Deca", sans-serif;
+
 }
-h1,h2,h3,h4,h5,h6{
-  font-family: "Merriweather", serif;
-}
+// h1,h2,h3,h4,h5,h6{
+//   font-family: "Merriweather", serif;
+// }
 h1,h2{
   letter-spacing: 4px !important;
 }
