@@ -1,53 +1,79 @@
 $mainColor:#F79320;
+// .feature{
+//   h2{
+//     font-size: 40px;
+//     font-weight: bold;
+//     margin-bottom: 20px;
+//   }
+//   .item{
+//     box-shadow: 0 0 10px #eee;
+//     transition: all .3s;
+//     h5{
+//       font-size: 17px;
+//       width: fit-content;
+//       margin: 0 auto 5px;
+//       position: relative;
+//       &::before{
+//         content: '';
+//         position: absolute;
+//         bottom: -5px;
+//         left: 0;
+//         height: 2px;
+//         width: 50px;
+//         background-color: $mainColor;
+//       }
+//     }
+//     ul{
+//       padding: 0 20px;
+//       li{
+//         font-size: 14px;
+//         position: relative;
+//         margin-bottom: 5px;
+//         &::before{
+//           content: '';
+//           position: absolute;
+//           top: 12px;
+//           left: -10px;
+//           transform: translateY(-50%);
+//           width: 5px;
+//           height: 5px;
+//           background-color: $mainColor;
+//           border-radius: 50%;
+//         }
+//       }
+//     }
+//     img{
+//       width: 100px;
+//       filter: drop-shadow(0 0 10px $mainColor);
+//     }
+//     &:hover{
+//       box-shadow: 0 0 10px #AAA;
+//     }
+//   }
+// }
+
 .feature{
-  h2{
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  .item{
-    box-shadow: 0 0 10px #eee;
-    transition: all .3s;
-    h5{
-      font-size: 17px;
-      width: fit-content;
-      margin: 0 auto 5px;
-      position: relative;
-      &::before{
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        height: 2px;
-        width: 50px;
-        background-color: $mainColor;
-      }
+    h2{
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
-    ul{
-      padding: 0 20px;
-      li{
+    .item{
+      h5{
         font-size: 14px;
-        position: relative;
-        margin-bottom: 5px;
-        &::before{
-          content: '';
-          position: absolute;
-          top: 12px;
-          left: -10px;
-          transform: translateY(-50%);
-          width: 5px;
-          height: 5px;
-          background-color: $mainColor;
-          border-radius: 50%;
-        }
+        margin: 0;
+        font-weight: 600;
+      }
+      p{
+        font-size: 12px;
+      }
+      img{
+        width: 50px;
+        filter: drop-shadow(0 0 10px $mainColor);
       }
     }
-    img{
-      width: 100px;
-      filter: drop-shadow(0 0 10px $mainColor);
-    }
-    &:hover{
-      box-shadow: 0 0 10px #AAA;
-    }
   }
+
+.feature-img{
+  object-fit: cover;
 }
