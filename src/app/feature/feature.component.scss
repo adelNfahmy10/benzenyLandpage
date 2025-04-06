@@ -67,9 +67,19 @@ $mainColor:#F79320;
       p{
         font-size: 12px;
       }
-      img{
+      .img-features{
+        margin: 0 auto;
         width: 50px;
-        filter: drop-shadow(0 0 10px $mainColor);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $mainColor;
+        img{
+          width: 30px;
+          filter: drop-shadow(0 0 10px $mainColor);
+        }
       }
     }
   }

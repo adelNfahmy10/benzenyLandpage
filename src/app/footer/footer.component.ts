@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { AppDownloadComponent } from "../app-download/app-download.component";
 
 @Component({
   selector: 'app-footer',
