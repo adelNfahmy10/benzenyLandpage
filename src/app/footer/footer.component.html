@@ -1,20 +1,52 @@
-<section id="contact" class="bg-light mt-3">
+<footer class="footer">
   <div class="container">
-    <div class="row g-3 py-4">
-      <div class="col-sm-3">
-        <div class="logo">
-          <img src="./assets/image/logo.webp" class="w-100" alt="benzeny">
-          <div class="soical d-flex justify-content-center align-items-center gap-3 mt-3">
-            <a href="https://www.facebook.com/share/1L9WGNx6Wb/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://sa.linkedin.com/company/benzeny-application" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/benzeny_app?igsh=azUzYjVreXhvbnNn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <div class="row g-2 py-4">
+      <div class="col-sm-4">
+        <div class="logo d-flex flex-column gap-3">
+          <img src="./assets/image/logo.webp" alt="benzeny">
+          <p class="m-0">Benzeny first launched in January 2020 covering the entire Makkah region mainly with SASCO stations.<br>We have a vision to Digitalize and simplify the exiting process, which will help to optimize fuel budget, reduce errors, control spending and automate fuel distribution.</p>
+          <div>
+            <h6>Social Media</h6>
+            <div class="soical d-flex justify-content-start align-items-center gap-2">
+              <a href="https://www.facebook.com/share/1L9WGNx6Wb/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://sa.linkedin.com/company/benzeny-application" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/benzeny_app?igsh=azUzYjVreXhvbnNn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-3">
-        <div class="links">
-          <ul class="list-unstyled d-flex flex-column gap-3">
+      <div class="col-sm-4">
+        <ul class="touch list-unstyled">
+          <h5>Get in Touch</h5>
+          <li><i class="fa-solid fa-phone"></i> +966 55 793 0442</li>
+          <li class="my-2"><i class="fa-solid fa-envelope"></i> contact.benzeny.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> Jeddah, Al balad, king Abdulaziz road</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="links d-flex justify-content-start align-items-start">
+          <div class="row g-2">
+            @for(section of sections;track $index){
+              <div class="col-6">
+                <a (click)="scrollToSection(section.id)" [ngClass]="{'active': activeLink === section.id}">
+                  <img [src]="section.image" class="footer-icons">
+                  {{ section.name }}
+                </a>
+              </div>
+            }
+            <hr class="my-3">
+            <h5 class="m-0">ADS</h5>
+            <div class="col-3">
+              <a class="cr auth-ads"><img src="./assets/image/login.png" class="footer-icons"> Login</a>
+            </div>
+            <div class="col-3">
+              <a class="cr auth-ads"><img src="./assets/image/signup.png" class="footer-icons"> Signup</a>
+            </div>
+          </div>
+
+          <!-- <ul class="list-unstyled d-flex flex-column gap-3">
             @for(section of sections;track $index){
               <li>
                 <a (click)="scrollToSection(section.id)" [ngClass]="{'active': activeLink === section.id}">
@@ -23,17 +55,16 @@
                 </a>
               </li>
             }
-          </ul>
+          </ul> -->
+          <!-- <ul class="list-unstyled d-flex flex-column gap-3">
+            <li><a class="cr auth-ads"><img src="./assets/image/login.png" class="footer-icons"> Login</a></li>
+            <li><a class="cr auth-ads"><img src="./assets/image/signup.png" class="footer-icons"> Signup</a></li>
+          </ul> -->
         </div>
-      </div>
-
-      <div class="col-sm-3">
-        <h6>Ads Signup</h6>
-        <ul class="list-unstyled d-flex flex-column gap-3">
-          <li><a class="cr auth-ads"><img src="./assets/image/login.png" class="footer-icons"> Login</a></li>
-          <li><a class="cr auth-ads"><img src="./assets/image/signup.png" class="footer-icons"> Signup</a></li>
-        </ul>
       </div>
     </div>
   </div>
-</section>
+  <div class="copy-right text-center p-2">
+    <p class="m-0">Taiba connect &copy; 2025</p>
+  </div>
+</footer>
