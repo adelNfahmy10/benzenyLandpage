@@ -1,64 +1,79 @@
 $mainColor:#F79320;
-a{
-  color: inherit;
-  text-decoration: none;
-}
-.soical{
-  a{
-    color: $mainColor;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px solid $mainColor;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    transition: all .3s;
-    i{
-      font-size: 20px;
+footer{
+  background-color: #FBFBFB;
+  .logo{
+    img{
+      width: 200px;
     }
-    &:hover{
-      background-color: $mainColor;
-      color: #fff;
-      border-radius: 0;
+    p{
+      font-size: 12px;
+      color: #2222228c;
     }
-  }
-}
-.links{
-  ul{
-    li{
+    .soical{
       a{
-        position: relative;
-        cursor: pointer;
+        color: $mainColor;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid $mainColor;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
         transition: all .3s;
-        text-decoration: none;
-        &::before{
-          content: '';
-          position: absolute;
-          bottom: -7px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background-color: $mainColor;
-          transition: all .3s;
+        i{
+          font-size: 16px;
         }
         &:hover{
-          color: $mainColor;
-          .footer-icons{
-            filter: drop-shadow(0 0 10px $mainColor);
-          }
+          background-color: $mainColor;
+          color: #fff;
+          border-radius: 0;
         }
-        &:hover::before{
-          width: 70%;
-        }
-
       }
     }
   }
-}
-
-.footer-icons{
-  transition: all .3s;
-  width: 20px;
+  .touch{
+    i{
+      color: $mainColor;
+    }
+    li{
+      font-size: 14px;
+      color: #2222228c;
+    }
+  }
+  .links{
+    a{
+      position: relative;
+      cursor: pointer;
+      transition: all .3s;
+      text-decoration: none;
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $mainColor;
+        transition: all .3s;
+      }
+      &:hover{
+        color: $mainColor;
+        .footer-icons{
+          filter: drop-shadow(0 0 10px $mainColor);
+        }
+      }
+      &:hover::before{
+        width: 70%;
+      }
+    }
+  }
+  .footer-icons{
+    transition: all .3s;
+    width: 20px;
+  }
+  .copy-right{
+    background-color: $mainColor;
+    color: #fff;
+  }
 }
