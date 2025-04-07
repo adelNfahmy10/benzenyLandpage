@@ -1,30 +1,12 @@
 $mainColor:#f79320;
 
 .service{
+  background-color: #f9f9f9ab;
   h2{
     font-size: 40px;
     word-spacing: -5px;
     font-weight: bold;
   }
-  background-color: #f9f9f9ab;
-  swiper-container {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-  }
-
-  swiper-slide img {
-    display: block;
-    width: 100%;
-  }
-
   .service-info{
     h5{
       font-size: 17px;
@@ -57,6 +39,54 @@ $mainColor:#f79320;
           background-color: $mainColor;
           border-radius: 50%;
         }
+      }
+    }
+  }
+  swiper-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 200px;
+      height: 200px;
+    }
+    swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .box{
+    padding: 20px 30px;
+    background-color: #fff;
+    transition: all .3s;
+    .img-service{
+      img{
+        width: 50px !important;
+        transition: all .3s;
+      }
+    }
+    h4{
+      font-size: 20px;
+      transition: all .3s;
+    }
+    p{
+      font-size: 14px;
+      color: #282828b0;
+      transition: all .3s;
+    }
+    &:hover{
+      background-color: $mainColor;
+      p, h4{
+        color: #fff !important;
+        transform: scale(1.1);
+      }
+      p{
+        transform: translateY(5px);
+      }
+      img{
+        transform: scale(1.2) rotate(10deg);
       }
     }
   }
