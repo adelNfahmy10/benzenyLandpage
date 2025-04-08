@@ -1,4 +1,4 @@
 <section class="overflow-hidden">
   <router-outlet></router-outlet>
-  <a href="#home" [ngClass]="{'d-block': showArrow,'d-none': !showArrow}" class="arrowup cr"><i class="fa-solid fa-chevron-up"></i></a>
+  <a (click)="scrollToTop()" [ngClass]="{'d-block': showArrow,'d-none': !showArrow}" class="arrowup cr"><i class="fa-solid fa-chevron-up"></i></a>
 </section>

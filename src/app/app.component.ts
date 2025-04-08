@@ -21,4 +21,8 @@ export class AppComponent {
       this.showArrow = false
     }
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
