@@ -25,7 +25,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
-    "ngx-owl-carousel-o": "^19.0.0",
+    "ngx-owl-carousel-o": "^17.0.1",
     "ngx-wow": "^2.0.1",
     "rxjs": "~7.8.0",
     "swiper": "^11.2.4",
