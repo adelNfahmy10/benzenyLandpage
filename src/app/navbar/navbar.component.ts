@@ -11,24 +11,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent{
   private readonly _PLATFORM_ID = inject(PLATFORM_ID)
-  navbarWidth:string = '75%'
-  navbarLeft:string = '12.5%'
-  navbarTop:string = '15px'
+  navbarTop:string = '0'
   lastScrollTop = 0;
-  isNavbarVisible = true;
 
   @HostListener('window:scroll') onScroll(){
     const scrollPosition = window.scrollY;
-
-    if (scrollPosition > 200) {
-      this.navbarWidth = '100%';
-      this.navbarLeft = '0';
-      this.navbarTop = '0';
-    } else {
-      this.navbarWidth = '75%';
-      this.navbarLeft = '12.5%';
-      this.navbarTop = '15px';
-    }
 
     if (scrollPosition > this.lastScrollTop) {
       if(this.lastScrollTop > 200){
@@ -37,14 +24,11 @@ export class NavbarComponent{
     } else {
       if(this.lastScrollTop > 200){
         this.navbarTop = '0';
-      } else {
-        this.navbarTop = '15px';
       }
     }
 
     this.lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
   }
-
 
   sections = [
     { id: 'home', name: 'Home' },
