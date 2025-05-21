@@ -16,8 +16,10 @@ export class NavbarComponent{
   navbarTop:string = '0'
   lastScrollTop = 0;
   activeLink: string = '';
+
   sections = [
     { id: 'home', name: 'Home' },
+    { id: 'fill', name: 'Fill Fuel' },
     { id: 'about', name: 'About' },
     { id: 'feature', name: 'Features' },
     { id: 'package', name: 'Packages' },
@@ -36,7 +38,12 @@ export class NavbarComponent{
       }
     }
 
-    this.lastScrollTop = Math.max(scrollPosition, 0);
+    this.lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+  }
+
+
+  setActiveLink(sectionId: string) {
+    this.activeLink = sectionId;
   }
 
   scrollToSection(sectionId: string) {
@@ -45,17 +52,23 @@ export class NavbarComponent{
       element.scrollIntoView({ behavior: 'smooth' });
       this.setActiveLink(sectionId);
     } else {
-      // لو في صفحة تانية، ارجع للرئيسية مع تمرير الـ sectionId كـ query param
       this._Router.navigate(['/'], { queryParams: { scrollTo: sectionId } });
     }
   }
 
-  setActiveLink(sectionId: string) {
-    this.activeLink = sectionId;
-  }
-
   ngAfterViewInit() {
     if(isPlatformBrowser(this._PLATFORM_ID)){
+      this._ActivatedRoute.queryParams.subscribe(params => {
+      const sectionId = params['scrollTo'];
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+      });
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -72,17 +85,8 @@ export class NavbarComponent{
         if (element) observer.observe(element);
       });
 
-      this._ActivatedRoute.queryParams.subscribe(params => {
-      const sectionId = params['scrollTo'];
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        }
-      }
-    });
+
     }
   }
+
 }
