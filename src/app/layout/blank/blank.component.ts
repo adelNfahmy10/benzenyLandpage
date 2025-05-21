@@ -7,11 +7,12 @@ import { HomeComponent } from "../../home/home.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { AppDownloadComponent } from "../../app-download/app-download.component";
 import { PackagesComponent } from "../../packages/packages.component";
+import { FillFuelComponent } from "../../fill-fuel/fill-fuel.component";
 
 @Component({
   selector: 'app-blank',
   standalone: true,
-  imports: [AboutComponent, FeatureComponent, NavbarComponent, HomeComponent, FooterComponent, AppDownloadComponent, PackagesComponent],
+  imports: [AboutComponent, FeatureComponent, NavbarComponent, HomeComponent, FooterComponent, AppDownloadComponent, PackagesComponent, FillFuelComponent],
   templateUrl: './blank.component.html',
   styleUrl: './blank.component.scss'
 })

@@ -4,11 +4,16 @@ $mainColor:#f79320;
   .card{
     .card-title{
       color: $mainColor;
-      font-size: 30px;
+      font-size: 20px;
       border-bottom: 1px solid $mainColor;
       padding-bottom: 10px;
+      text-align: center;
     }
-    .subscripe-btn{
+    .card-text{
+      font-size: 18px;
+    }
+    .subscribe-btn{
+      width: 200px;
       background-color: $mainColor;
       color: #fff;
     }
