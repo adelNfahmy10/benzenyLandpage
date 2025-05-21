@@ -1,6 +1,6 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -25,4 +25,6 @@ export class AppComponent {
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+
 }

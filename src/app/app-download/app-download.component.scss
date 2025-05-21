@@ -1,8 +1,5 @@
 $mainColor:#F79320;
 section {
-  color: #fff;
-  background: linear-gradient(to bottom, #00000072, #00000072),
-    url("../../assets/image/app-download/bg-app-download.jpg");
   background-size: cover;
   background-position: center center;
   width: 75%;
@@ -26,7 +23,7 @@ section {
   }
 
   .info-download {
-    background-color: #f79320a1;
+    background-color: #f79320dc;
     transition: all 0.3s;
 
     &:hover {
