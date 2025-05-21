@@ -1,6 +1,10 @@
 $mainColor:#f79320;
 .about{
   padding: 100px 0;
+  background-color: #eeeeee85;
+  @media (max-width:567px) {
+    padding: 50px 0;
+  }
   .about-img{
     img{
       width: 90%;
@@ -24,6 +28,10 @@ $mainColor:#f79320;
     right: 10px;
     width: 60%;
     height: 200px;
+
+    @media (max-width:567px) {
+      display: none;
+    }
   }
 }
 
